@@ -21,15 +21,15 @@ Payload example:
 
 ```
 [{
-    "url":"file:///D:/Java%20Projects/SDA_SE_Backend_Coding_Challenge_2/task/TestDataWithoutSuspicious.pdf",
+    "url":"file:///D:/Java%20Projects/TestDataWithoutSuspicious.pdf",
     "fileType":"PDF"
   },
   {
-    "url":"file:///D:/Java%20Projects/SDA_SE_Backend_Coding_Challenge_2/task/TestDataWithSuspicious.pdf",
+    "url":"file:///D:/Java%20Projects/TestDataWithSuspicious.pdf",
     "fileType":"PDF"
   },
   {
-    "url":"file:///D:/Java%20Projects/SDA_SE_Backend_Coding_Challenge_2/task/NotExistingPdf.pdf",
+    "url":"file:///D:/Java%20Projects/NotExistingPdf.pdf",
     "fileType":"PDF"
 }]
 ```
