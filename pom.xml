@@ -17,7 +17,7 @@
     <properties>
         <java.source.target.version>17</java.source.target.version>
         <spring.boot.version>3.2.8</spring.boot.version>
-        <spring.framework.version>6.0.22</spring.framework.version>
+        <spring.framework.version>6.2.0</spring.framework.version>
         <lombok.version>1.18.34</lombok.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>${java.source.target.version}</maven.compiler.release>
