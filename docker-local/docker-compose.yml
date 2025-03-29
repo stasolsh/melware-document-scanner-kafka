@@ -8,6 +8,8 @@ services:
       - "9090:9090"
       - "9890:9890"
     container_name: prime-app
+    depends_on:
+      - kafka
   test-data-producer:
     build:
       context: ./melware-document-scanner-kafka/test-data-producer
@@ -16,6 +18,8 @@ services:
       - "9091:9091"
       - "9891:9891"
     container_name: test-data-producer
+    depends_on:
+      - kafka
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.4
     environment:
