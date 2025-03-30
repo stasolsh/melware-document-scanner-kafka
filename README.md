@@ -5,37 +5,37 @@ Kafka-based solution for IBAN validity scanner
 
 Steps how to start current service:
 
-1. Launch Kafka broker.
-2. Run mvn -T 1C clean install
-3. cd prime-app/target
-4. Run java -jar prime-app.jar
-5. cd test-data-producer/target
-6. Run java -jar test-data-producer.jar
-7. Use any REST client to download test payload. Method POST
-
+#### 1. Run melware-document-scanner-kafka locally:
+Go to \docker-local and run
 ```
- http://localhost:8081/downloadTestData
+run.bat|sh
+```
+
+#### 2. Use any REST client to download test payload. Method POST
+```
+ http://localhost:9091/downloadTestData
 ```
 
 Payload example:
 
 ```
 [{
-    "url":"file:///D:/Java%20Projects/TestDataWithoutSuspicious.pdf",
+    "url":"file:///var/www/html/TestDataWithoutSuspicious.pdf",
     "fileType":"PDF"
   },
   {
-    "url":"file:///D:/Java%20Projects/TestDataWithSuspicious.pdf",
+    "url":"file:///var/www/html/TestDataWithSuspicious.pdf",
     "fileType":"PDF"
   },
   {
-    "url":"file:///D:/Java%20Projects/NotExistingPdf.pdf",
+    "url":"file:///var/www/html/NotExistingPdf.pdf",
     "fileType":"PDF"
 }]
 ```
-8. Check out the latest messages for verification results from Kafka. 
+#### 3. Check out the latest messages for verification results from Kafka.
+
 ```
- kafka-console-consumer.bat(or .sh) --bootstrap-server localhost:9092 --topic checkResultEventTopic --from-beginning
+ kafka-console-consumer --bootstrap-server localhost:9092 --topic checkResultEventTopic --from-beginning
 ```
 
 Note: As blacklisted IBANs the application considers (list stored in DB):
@@ -43,4 +43,9 @@ Note: As blacklisted IBANs the application considers (list stored in DB):
 DE15300606010505780780 
 UPC82771401621500311 
 124343433444444444444 
+```
+
+#### 4. Stop services with:
+```
+stop.bat|sh
 ```
