@@ -6,12 +6,15 @@ ORIGIN=$(pwd)
 cd ../../
 ROOT=$(pwd)
 
-docker-compose -p rest-based -f docker-compose.yml stop rest-based-solution
+docker-compose -f docker-compose.yml stop
 
-cd "$ROOT"/rest-based-solution
+cd "$ROOT"/melware-document-scanner-kafka/test-data-producer
+mvn -T 1C clean install -DskipTests=true
+
+cd "$ROOT"/melware-document-scanner-kafka/prime-app
 mvn -T 1C clean install -DskipTests=true
 
 cd "$ROOT"/
-docker-compose -p rest-based -f docker-compose.yml up --build -d --no-deps rest-based-solution
+docker-compose -f docker-compose.yml up --build -d --no-deps
 
 cd "$ORIGIN"
