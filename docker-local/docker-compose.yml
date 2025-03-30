@@ -8,6 +8,8 @@ services:
       - "9090:9090"
       - "9890:9890"
     container_name: prime-app
+    volumes:
+      - "./suspicious-files:/var/www/html"
     depends_on:
       - kafka
   test-data-producer:
