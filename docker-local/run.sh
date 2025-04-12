@@ -8,10 +8,10 @@ ROOT=$(pwd)
 
 docker-compose -f docker-compose.yml stop
 
-cd "$ROOT"/melware-document-scanner-kafka/test-data-producer
+cd "$ROOT"/malware-document-scanner-kafka/test-data-producer
 mvn -T 1C clean install -DskipTests=true
 
-cd "$ROOT"/melware-document-scanner-kafka/prime-app
+cd "$ROOT"/malware-document-scanner-kafka/prime-app
 mvn -T 1C clean install -DskipTests=true
 
 cd "$ROOT"/
