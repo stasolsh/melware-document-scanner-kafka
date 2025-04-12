@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.malware.scanner.streaming</groupId>
-        <artifactId>melware-document-scanner-kafka</artifactId>
+        <artifactId>malware-document-scanner-kafka</artifactId>
         <version>1.1.01</version>
     </parent>
     <artifactId>prime-app</artifactId>

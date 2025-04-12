@@ -2,7 +2,7 @@ version: '3.7'
 services:
   prime-app:
     build:
-      context: ./melware-document-scanner-kafka/prime-app
+      context: ./malware-document-scanner-kafka/prime-app
       dockerfile: Dockerfile
     ports:
       - "9090:9090"
@@ -14,7 +14,7 @@ services:
       - kafka
   test-data-producer:
     build:
-      context: ./melware-document-scanner-kafka/test-data-producer
+      context: ./malware-document-scanner-kafka/test-data-producer
       dockerfile: Dockerfile
     ports:
       - "9091:9091"

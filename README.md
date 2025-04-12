@@ -5,7 +5,7 @@ Kafka-based solution for IBAN validity scanner
 
 Steps how to start current service:
 
-#### 1. Run melware-document-scanner-kafka locally:
+#### 1. Run malware-document-scanner-kafka locally:
 Go to \docker-local and run
 ```
 run.bat|sh
