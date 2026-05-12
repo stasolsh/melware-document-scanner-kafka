@@ -16,7 +16,9 @@ jobs:
           distribution: temurin
       - name: Run the Maven verify phase
         run: mvn clean test --batch-mode --update-snapshots verify
-      - uses: stasolsh/spring-boot-quality-gate-action@v1
+      - name: Upload coverage
+        uses: codecov/codecov-action@v5
         with:
-          coverage-threshold: 80
-          build-tool: auto
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage-report/target/site/jacoco-aggregate/jacoco.xml
+          fail_ci_if_error: true
