@@ -12,6 +12,7 @@
     <modules>
         <module>test-data-producer</module>
         <module>prime-app</module>
+        <module>coverage-report</module>
     </modules>
 
     <properties>
@@ -50,4 +51,26 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>0.8.12</version>
+                    <executions>
+
+                        <!-- Enables coverage collection in all modules -->
+                        <execution>
+                            <id>prepare-agent</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
