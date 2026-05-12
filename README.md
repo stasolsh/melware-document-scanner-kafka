@@ -1,6 +1,14 @@
 Kafka-based solution for IBAN validity scanner
 ====
 
+![Build](https://github.com/stasolsh/melware-document-scanner-kafka/actions/workflows/custom-action.yml/badge.svg)
+![Coverage](https://codecov.io/gh/stasolsh/melware-document-scanner-kafka/branch/master/graph/badge.svg)
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?logo=springboot)
+![Maven](https://img.shields.io/badge/Maven-3.9+-blue)
+![JUnit](https://img.shields.io/badge/JUnit-5-red?logo=junit5)
+![License](https://img.shields.io/badge/license-MIT-green)
+
 ## Instructions:
 
 Steps how to start current service:
